@@ -1,6 +1,6 @@
 Revision history for Module-CheckDep-Version
 
-0.02 UNREL
+0.02    2017-06-26
         - added ignore_any param, default on, if set to false, we'll ignore all
           prereqs that have a version of 0 set
 

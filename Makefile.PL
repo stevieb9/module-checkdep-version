@@ -10,6 +10,7 @@ WriteMakefile(
     ABSTRACT_FROM    => 'lib/Module/CheckDep/Version.pm',
     LICENSE          => 'perl_5',
     PL_FILES         => {},
+    EXE_FILES        => [qw(bin/checkdep)],
     MIN_PERL_VERSION => '5.006',
     META_MERGE => {
         'meta-spec' => { version => 2 },

@@ -1,6 +1,7 @@
 Revision history for Module-CheckDep-Version
 
-0.03 UNREL
+0.03    2017-06-26
+        - added 'checkdep' binary, which is installed along with the module
 
 0.02    2017-06-26
         - added ignore_any param, default on, if set to false, we'll ignore all

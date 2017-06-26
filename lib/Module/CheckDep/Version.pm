@@ -194,6 +194,10 @@ author's distributions
 
 =head1 DESCRIPTION
 
+See L</bin/checkdep> for a binary script that you can use directly instead of
+using this API. You can also run `perldoc checkdep` at the command line after
+installation to read its manual.
+
 This module retrieves all [http://cpan.org|CPAN] distributions for a single
 author, extracts out all of the dependencies for each distribution, then lists
 all dependencies that have updated versions so you're aware which prerequisite

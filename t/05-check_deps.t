@@ -50,6 +50,28 @@ use constant AUTH => 'STEVEB';
     check_deps(AUTH, handler => \&handler);
 }
 
+{ # ignore_any
+
+        my $ignored = check_deps(
+                        AUTH, module => 'Test::BrewBuild', 
+                        all => 1,
+                        return => 1
+                      );
+
+        my $include = check_deps(
+                        AUTH, module => 'Test::BrewBuild', 
+                        all => 1,
+                        return => 1,
+                        ignore_any => 0
+                      );
+        use Data::Dumper;
+
+        my $exc = keys %{ $ignored->{'Test-BrewBuild'} }; 
+        my $inc = keys %{ $include->{'Test-BrewBuild'} };
+
+        is $exc < $inc, 1, "ignore_any => 0 ok";
+}    
+
 sub handler {
     my $data = shift;
     

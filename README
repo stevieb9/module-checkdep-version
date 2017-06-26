@@ -43,6 +43,12 @@ SYNOPSIS
                 print "\n";
             }
         }
+    
+        # by default, we skip over dependencies that are listed with a version of
+        # 0 (zero). This version value means 'any version of this prereq is fine'.
+        # You can include these in your listing if you wish
+    
+        check_deps('STEVEB', ignore_any => 0);
 
 DESCRIPTION
 
@@ -92,6 +98,13 @@ FUNCTIONS
     Optional, Bool. By default we print results to STDOUT. Set this to true
     to have the data in hash reference form returned to you instead.
     Default is off/false.
+
+        ignore_any => 0
+
+    Optional, Bool. By default, we skip over any prerequisite modules that
+    are listed with a version of 0 (zero). This says that any version of
+    the prerequisite module will do. Set this parameter to a false value to
+    have those distributions listed as well. Defaults to on/true.
 
         handler => \&function
 

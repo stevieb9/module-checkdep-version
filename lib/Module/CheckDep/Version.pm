@@ -24,7 +24,8 @@ sub check_deps {
     my $all = $args{all};
     my $custom_handler = $args{handler};
     my $return = $args{return};
-
+    my $ignore_any = defined $args{ignore_any} ? $args{ignore_any} : 1;
+   
     my $author_modules = _author_modules($author);
 
     my %needs_attention;
@@ -42,6 +43,10 @@ sub check_deps {
             my $dep_ver = $dep->{version};
 
             next if $dep_mod eq 'perl';
+            
+            if ($ignore_any && $dep_ver == 0){
+                next;
+            }
 
             $dep_ver .= '.00' if $dep_ver !~ /\./;
 
@@ -177,6 +182,12 @@ author's distributions
         }
     }
 
+    # by default, we skip over dependencies that are listed with a version of
+    # 0 (zero). This version value means 'any version of this prereq is fine'.
+    # You can include these in your listing if you wish
+
+    check_deps('STEVEB', ignore_any => 0);
+
 =head1 DESCRIPTION
 
 This module retrieves all [http://cpan.org|CPAN] distributions for a single
@@ -224,6 +235,13 @@ all listed prerequisite distributions. Defaults to off/false.
 Optional, Bool. By default we print results to C<STDOUT>. Set this to true to
 have the data in hash reference form returned to you instead. Default is
 off/false.
+
+    ignore_any => 0
+
+Optional, Bool. By default, we skip over any prerequisite modules that are
+listed with a version of 0 (zero). This says that any version of the
+prerequisite module will do. Set this parameter to a false value to have those
+distributions listed as well. Defaults to on/true.
 
     handler => \&function
 

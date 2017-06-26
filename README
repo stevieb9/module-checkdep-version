@@ -25,7 +25,7 @@ SYNOPSIS
     
         # send in your own custom function to manage the data
     
-        check_deps('STEVEB', display => \&my_handler);
+        check_deps('STEVEB', handler => \&my_handler);
     
         sub my_handler {
             # this is the actual code from the default
@@ -43,6 +43,17 @@ SYNOPSIS
                 print "\n";
             }
         }
+
+DESCRIPTION
+
+    This module retrieves all [http://cpan.org|CPAN] distributions for a
+    single author, extracts out all of the dependencies for each
+    distribution, then lists all dependencies that have updated versions so
+    you're aware which prerequisite distributions are behind in version
+    than what is currently being required.
+
+    Can list only the prerequisites that are written by the same author, or
+    optionally all prerequisite distributions by all authors.
 
 EXPORT_OK
 
@@ -82,7 +93,7 @@ FUNCTIONS
     to have the data in hash reference form returned to you instead.
     Default is off/false.
 
-        display => \&function
+        handler => \&function
 
     Optional, code reference. You can send in a reference to a function you
     create to handle the data. See "SYNOPSIS" for an example of the format

@@ -15,8 +15,6 @@ use MetaCPAN::Client;
 
 my $mc = MetaCPAN::Client->new;
 
-my $author = 'STEVEB';
-
 sub check_deps {
     my ($author, %args) = @_;
 
@@ -178,6 +176,16 @@ author's distributions
             print "\n";
         }
     }
+
+=head1 DESCRIPTION
+
+This module retrieves all [http://cpan.org|CPAN] distributions for a single
+author, extracts out all of the dependencies for each distribution, then lists
+all dependencies that have updated versions so you're aware which prerequisite
+distributions are behind in version than what is currently being required.
+
+Can list only the prerequisites that are written by the same author, or
+optionally all prerequisite distributions by all authors.
 
 =head1 EXPORT_OK
 

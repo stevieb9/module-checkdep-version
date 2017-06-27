@@ -61,7 +61,7 @@ convenience.
 
     checkdep PAUSEID [options]
 
-Where `[options]` are:
+Where C<[options]> are:
 
     -a|--all        Work on all dependencies, not just the author's
     -m|--module     String; Work only on a specific distribution. (eg: Mock::Sub)

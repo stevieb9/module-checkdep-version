@@ -54,7 +54,7 @@ behind newer versions
 
 =head1 DESCRIPTION
 
-This is simply a script that uses the L<Module::CheckDep::Version] module as a
+This is simply a script that uses the L<Module::CheckDep::Version> module as a
 convenience.
 
 =head1 USAGE

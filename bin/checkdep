@@ -28,13 +28,14 @@ my $help;
 GetOptions (
     "all|a"         => \$opts{all},
     "module|m=s"    => \$opts{module},
-    "zero|z"        => \$opts{ignore_all},
+    "zero|z"        => \$opts{ignore_any},
     "help|h"        => \$help
 );
 
 _help() if $help;
 
-$opts{ignore_all} = 0 if $opts{ignore_all};
+$opts{ignore_any} = 0 if $opts{ignore_any};
+
 check_deps($pause_id, %opts);
 
 sub _help {

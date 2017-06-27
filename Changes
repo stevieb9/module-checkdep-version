@@ -2,6 +2,8 @@ Revision history for Module-CheckDep-Version
 
 0.05 UNREL
         - fix typo in a POD link in checkdev binary
+        - fix typo in binary arg handling; was using 'ignore_all' as opposed to
+          'ignore_any'... doh!
 
 0.04    2017-06-26
         - fixed issue where if -h is supplied to binary, we skip checking for a

@@ -195,7 +195,7 @@ author's distributions
 =head1 DESCRIPTION
 
 See L</checkdep> for a binary script that you can use directly instead of
-using this API. You can also run `perldoc checkdep` at the command line after
+using this API. You can also run C<perldoc checkdep> at the command line after
 installation to read its manual.
 
 This module retrieves all [http://cpan.org|CPAN] distributions for a single

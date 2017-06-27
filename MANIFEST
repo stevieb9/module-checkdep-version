@@ -1,3 +1,4 @@
+bin/checkdep
 Changes
 lib/Module/CheckDep/Version.pm
 Makefile.PL

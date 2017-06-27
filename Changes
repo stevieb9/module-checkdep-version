@@ -1,5 +1,7 @@
 Revision history for Module-CheckDep-Version
 
+0.05 UNREL
+
 0.04    2017-06-26
         - fixed issue where if -h is supplied to binary, we skip checking for a
           valid author

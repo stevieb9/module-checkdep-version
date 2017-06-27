@@ -1,6 +1,6 @@
 Revision history for Module-CheckDep-Version
 
-0.05 UNREL
+0.05    2017-06-26
         - fix typo in a POD link in checkdev binary
         - fix typo in binary arg handling; was using 'ignore_all' as opposed to
           'ignore_any'... doh!

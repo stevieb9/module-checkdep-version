@@ -194,7 +194,7 @@ author's distributions
 
 =head1 DESCRIPTION
 
-See L</bin/checkdep> for a binary script that you can use directly instead of
+See L</checkdep> for a binary script that you can use directly instead of
 using this API. You can also run `perldoc checkdep` at the command line after
 installation to read its manual.
 

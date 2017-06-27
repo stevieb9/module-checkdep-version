@@ -5,7 +5,7 @@ use warnings;
 use Getopt::Long;
 use Module::CheckDep::Version qw(check_deps);
 
-_help() if ! @ARGV;
+_help() if ! @ARGV || $ARGV[0] eq '-h' || $ARGV[0] eq '--help';
 
 my $mc = MetaCPAN::Client->new;
 

@@ -1,5 +1,9 @@
 Revision history for Module-CheckDep-Version
 
+0.04 UNREL
+        - fixed issue where if -h is supplied to binary, we skip checking for a
+          valid author
+
 0.03    2017-06-26
         - added 'checkdep' binary, which is installed along with the module
 

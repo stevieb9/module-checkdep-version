@@ -1,5 +1,7 @@
-NAME Compare the required version of a distribution's prerequisites against
-their most recent release
+NAME
+
+    Module::CheckDep::Version - Compare the required version of a
+    distribution's prerequisites against their most recent release
 
     Module::CheckDep::Version - Compare v
 
@@ -72,7 +74,7 @@ DESCRIPTION
     using this API. You can also run perldoc checkdep at the command line
     after installation to read its manual.
 
-    This module retrieves all [http://cpan.org|CPAN] distributions for a
+    This module retrieves all CPAN <http://cpan.org> distributions for a
     single author, extracts out all of the dependencies for each
     distribution, then lists all dependencies that have updated versions so
     you're aware which prerequisite distributions have newer releases than

@@ -136,8 +136,10 @@ sub __placeholder {} # vim folds
 1;
 __END__
 
-=head1 NAME Compare the required version of a distribution's prerequisites
-against their most recent release
+=head1 NAME
+
+Module::CheckDep::Version - Compare the required version of a distribution's
+prerequisites against their most recent release
 
 Module::CheckDep::Version - Compare v
 

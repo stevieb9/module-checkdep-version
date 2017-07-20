@@ -1,7 +1,7 @@
 Revision history for Module-CheckDep-Version
 
 0.08 UNREL
-        -
+        - fix POD link to CPAN in DESCRIPTION
 
 0.07    2017-07-20
         - no functional changes

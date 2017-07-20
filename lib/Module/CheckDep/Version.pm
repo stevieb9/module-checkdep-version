@@ -136,12 +136,10 @@ sub __placeholder {} # vim folds
 1;
 __END__
 
-=head1 NAME
+=head1 NAME Compare the required version of a distribution's prerequisites
+against their most recent release
 
-Module::CheckDep::Version - Compare
-
-List prereqs that need a version bump for an
-author's distributions
+Module::CheckDep::Version - Compare v
 
 =for html
 <a href="http://travis-ci.org/stevieb9/module-checkdep-version"><img src="https://secure.travis-ci.org/stevieb9/module-checkdep-version.png"/>

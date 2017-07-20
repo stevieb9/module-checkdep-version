@@ -1,7 +1,7 @@
 Revision history for Module-CheckDep-Version
 
 0.07 UNREL
-        -
+        - slightly modified POD in the script
 
 0.06    2017-07-20
         - modified/clarified documentation, and added warnings about recklessly

@@ -138,7 +138,9 @@ __END__
 
 =head1 NAME
 
-Module::CheckDep::Version - List prereqs that need a version bump for an
+Module::CheckDep::Version - Compare
+
+List prereqs that need a version bump for an
 author's distributions
 
 =for html
@@ -149,11 +151,11 @@ author's distributions
 
     use Module::CheckDep::Version qw(check_deps);
 
-    # list only the author's own prereqs that are behind
+    # list only the author's own prereqs that have newer versions
 
     check_deps('STEVEB');
     
-    # list all prereqs that are behind by all authors
+    # list all prereqs that have newer versions by all authors
 
     check_deps('STEVEB', all => 1);
 
@@ -194,6 +196,21 @@ author's distributions
 
 =head1 DESCRIPTION
 
+WARNING: It is prudent to only increase the required version of a prerequisite
+distribution when absolutely necessary. Please don't arbitrarily bump prereq
+version numbers just because newer versions of a software have been released.
+
+This module was originally designed so that I could easily track prereqs that I
+wrote that my other distributions require. Again... please don't arbitrarily
+bump prerequisite version numbers unless there is a functional requirement to do
+so.
+
+For example, my L<RPi::WiringPi> distribution uses about a dozen other C<RPI::>
+distributions. If I update some of those (they are all stand-alone),
+periodically I want to check C<RPi::WiringPi> to ensure I'm requiring the most
+up-to-date functionality of the individual component distributions within the
+top level one that includes them all.
+
 See L</checkdep> for a binary script that you can use directly instead of
 using this API. You can also run C<perldoc checkdep> at the command line after
 installation to read its manual.
@@ -201,7 +218,7 @@ installation to read its manual.
 This module retrieves all [http://cpan.org|CPAN] distributions for a single
 author, extracts out all of the dependencies for each distribution, then lists
 all dependencies that have updated versions so you're aware which prerequisite
-distributions are behind in version than what is currently being required.
+distributions have newer releases than what is currently being required.
 
 Can list only the prerequisites that are written by the same author, or
 optionally all prerequisite distributions by all authors.
@@ -218,7 +235,7 @@ Fetches a list of a CPAN author's distributions using L<MetaCPAN::Client>,
 extracts out the list of each distribution's prerequisite distributions,
 compares the required version listed against the currently available version
 and either returns or prints to the screen a list of each dependency that
-requires a version bump.
+has had newer versions published.
 
 Parameters:
 

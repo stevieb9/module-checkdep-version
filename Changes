@@ -1,7 +1,8 @@
 Revision history for Module-CheckDep-Version
 
-0.06 UNREL
-        - modified documentation with warnings per RT#122522
+0.06    2017-07-20
+        - modified/clarified documentation, and added warnings about recklessly
+          bumping prereq version numbers, per RT#122522
         - bump prereq of MetaCPAN::Client to 2.017000 (closes #1) (reported by
           Slaven Rezic)
 

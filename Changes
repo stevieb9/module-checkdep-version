@@ -1,7 +1,8 @@
 Revision history for Module-CheckDep-Version
 
 0.09 UNREL
-        -
+        - make t/05 rely on another distribution of mine, as the one we were
+          previously using tended to be updated properly at all times
 
 0.08    2017-07-20
         - no functional changes

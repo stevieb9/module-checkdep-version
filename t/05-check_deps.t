@@ -40,7 +40,7 @@ use constant AUTH => 'STEVEB';
 
 { # module
 
-    my $ret = check_deps(AUTH, module => 'RPi::WiringPi', return => 1);
+    my $ret = check_deps(AUTH, module => 'File::Edit::Portable', return => 1);
     is ref $ret, 'HASH', "returns ok";
     is keys %$ret, 1, "with module param, only one result returned ok";
 }

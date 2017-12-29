@@ -141,8 +141,6 @@ __END__
 Module::CheckDep::Version - Compare the required version of a distribution's
 prerequisites against their most recent release
 
-Module::CheckDep::Version - Compare v
-
 =for html
 <a href="http://travis-ci.org/stevieb9/module-checkdep-version"><img src="https://secure.travis-ci.org/stevieb9/module-checkdep-version.png"/>
 <a href='https://coveralls.io/github/stevieb9/module-checkdep-version?branch=master'><img src='https://coveralls.io/repos/stevieb9/module-checkdep-version/badge.svg?branch=master&service=github' alt='Coverage Status' /></a>

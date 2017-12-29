@@ -1,7 +1,7 @@
 Revision history for Module-CheckDep-Version
 
 1.00 UNREL
-        -
+        - fix erroneous entry in NAME secion in POD
 
 0.09    2017-12-29
         - make t/05 rely on newly uploaded Test::Module::CheckDep::Version, as

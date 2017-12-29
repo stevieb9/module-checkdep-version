@@ -79,11 +79,18 @@ use constant AUTH => 'STEVEB';
 }    
 
 { # _display
+
     my $hook = Hook::Output::Tiny->new;
+
+    my $ret = check_deps(
+        'STEVEB',
+        module => 'Test::Module::CheckDep::Version',
+        return => 1
+    );
 
     $hook->hook('stdout');
 
-    check_deps(AUTH, module => 'Test::Module::CheckDep::Version');
+    Module::CheckDep::Version::_display($ret);
 
     $hook->unhook;
 
@@ -91,8 +98,13 @@ use constant AUTH => 'STEVEB';
 
     like
         $output[0],
-        qr/Test::Module::CheckDep::Version/,
-        "output to STDOUT appears ok";
+        qr/Test-Module-CheckDep-Version/,
+        "output to STDOUT has dist name ok";
+
+    like
+        $output[1],
+        qr/Mock::Sub/,
+        "output to STDOUT has the lower version prereq ok";
 }
 
 sub handler {

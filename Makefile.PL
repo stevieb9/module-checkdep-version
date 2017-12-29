@@ -30,7 +30,6 @@ WriteMakefile(
     },
     BUILD_REQUIRES => {
         'Hook::Output::Tiny' => '0.05',
-        'Test::Module::CheckDep::Version', => '0',
         'Test::More' => '0',
     },
     PREREQ_PM => {
